@@ -55,10 +55,7 @@
     ("\\<\\([a-zA-Z_][a-zA-Z0-9_]*\\)\\s-*(" 1 font-lock-function-name-face)
     ("\\<\\(0x[0-9a-fA-F]+\\|\\(?:[0-9]+\\(?:\\.[0-9]+\\)?\\)\\)\\>" . font-lock-constant-face)
     ("\\(?:\\.\\)\\s-*\\([a-zA-Z_][a-zA-Z0-9_]*\\)\\>" 1 font-lock-variable-name-face)
-    ("\\<class\\>\\s-+\\([a-zA-Z_][a-zA-Z0-9_]*\\)\\>" 1 font-lock-type-face)
-    ("\\<class\\>\\s-+\\([a-zA-Z_][a-zA-Z0-9_]*\\)\\s-+<\\s-+\\([a-zA-Z_][a-zA-Z0-9_]*\\)\\>"
-     (1 font-lock-type-face)
-     (2 font-lock-type-face))))
+    ("\\<class\\>\\s-+\\([a-zA-Z_][a-zA-Z0-9_]*\\)\\>" 1 font-lock-type-face)))
 
 ;;;###autoload
 (define-derived-mode bs-mode prog-mode "BS"
