@@ -49,7 +49,8 @@
     '("nil" "true" "false" "this" "super" "is_main_module")))
 
 (defconst bs-font-lock-defaults
-  `((,(regexp-opt bs-keywords 'symbols) . font-lock-keyword-face)
+  `(("\\`#!/.*" 0 font-lock-preprocessor-face t)
+    (,(regexp-opt bs-keywords 'symbols) . font-lock-keyword-face)
     (,(regexp-opt bs-constants 'symbols) . font-lock-constant-face)
     ("\\<\\([a-zA-Z_][a-zA-Z0-9_]*\\)\\s-*(" 1 font-lock-function-name-face)
     ("\\<\\(0x[0-9a-fA-F]+\\|\\(?:[0-9]+\\(?:\\.[0-9]+\\)?\\)\\)\\>" . font-lock-constant-face)
