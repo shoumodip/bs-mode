@@ -30,8 +30,7 @@
   (with-syntax-table (copy-syntax-table)
 	(modify-syntax-entry ?' "\"")
 
-    (modify-syntax-entry ?# "< b")
-    (modify-syntax-entry ?/ ". 14b")
+    (modify-syntax-entry ?/ ". 124b")
     (modify-syntax-entry ?* ". 23n")
     (modify-syntax-entry ?\n "> b")
     (modify-syntax-entry ?\^m "> b")
@@ -64,7 +63,7 @@
 (define-derived-mode bs-mode prog-mode "BS"
   "Major mode for editing BS source code."
   :syntax-table bs-mode-syntax-table
-  (setq comment-start "#")
+  (setq comment-start "//")
   (setq font-lock-defaults '(bs-font-lock-defaults))
   (add-hook 'compilation-filter-hook
             (lambda ()
